@@ -48,32 +48,48 @@ Figure -02 HALF Subtractor
 5.	For different input combinations generate the timing diagram.
 
 
+Developed by: JAVITH FARKHAN S
+
+RegisterNumber: 212221240017
+
+**Program:**
 
 ```
-Developed by:JAVITH FARKHAN S
-RegisterNumber:212221240017
+**HALF_ADDER**
 
-module half_add(a,b,sum,carry,D,Bo);
+module half_adder(a,b,sum,carry);
 input a,b;
-output sum,carry,D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
-xor(sum,a,b);
-and(carry,a,b);
-wire abar;
-not(abar,a);
-xor(D,a,b);
-and(Bo,abar,b);
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+
+**HALF_SUBTRACTER**
+
+module half_subtracter(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
 endmodule
 ```
 
+
 **RTL Schematic**
 
-![Screenshot 2024-03-19 135323](https://github.com/afifa17112005/HALF_ADDER_SUBTRACTOR/assets/147080931/1df19e81-4328-42e8-9ba4-f3ef3282602f)
+**HALF_ADDER**
+<img width="950" alt="half_adder circuit dia" src="https://github.com/Ganesh23013987/HALF_ADDER_SUBTRACTOR/assets/147473768/94d026c5-31ab-4b03-8570-402fac8f8582">
 
-
+**HALF_SUBTRACTER**
+<img width="944" alt="half_subtracter circuit dia" src="https://github.com/Ganesh23013987/HALF_ADDER_SUBTRACTOR/assets/147473768/45b92357-b627-451f-8987-2b2212e2e8b9">
 
 **Output/TIMING Waveform**
-![Screenshot 2024-03-19 135036](https://github.com/afifa17112005/HALF_ADDER_SUBTRACTOR/assets/147080931/4197dc39-bd39-4412-a084-5bf6dfe3c9a5)
 
-**Result:**program implement half-adder-and-half-subtractor-circuit successfully executed
+**Half_adder**
+![half_adder](https://github.com/Ganesh23013987/HALF_ADDER_SUBTRACTOR/assets/147473768/959809ae-aa26-42f7-b8c4-14b0787a8ef7)
 
+**Half_subtracter**
+![half_subtracter](https://github.com/Ganesh23013987/HALF_ADDER_SUBTRACTOR/assets/147473768/bf7bf0be-898e-4861-a9a5-ba1d117e8b95)
 
+**Result:**
+The program code is successfully executed.
