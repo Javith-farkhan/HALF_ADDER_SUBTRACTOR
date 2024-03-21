@@ -48,13 +48,12 @@ Figure -02 HALF Subtractor
 5.	For different input combinations generate the timing diagram.
 
 
-Developed by: JAVITH FARKHAN S
-
-RegisterNumber: 212221240017
-
 **Program:**
 
 ```
+Developed by: JAVITH FARKHAN S
+RegisterNumber: 212221240017
+
 **HALF_ADDER**
 
 module half_adder(a,b,sum,carry);
